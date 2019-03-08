@@ -10,14 +10,7 @@ import org.mapstruct.factory.Mappers;
 @Mapper
 public interface CarMapper {
 
-    CarMapper INSTANCE = Mappers.getMapper(CarMapper.class);
-
     @Mapping(target = "manufacturingDate", dateFormat = "dd.MM.yyyy")
     @Mapping(target = "seatCount", source = "numberOfSeats")
     CarDto map(Car car);
-
-    default String toModel(Model model) {
-        return model.getName();
-    }
-
 }

@@ -5,7 +5,7 @@ import org.mapstruct.Mapper;
 /**
  * @author Filip Hrisafov
  */
-@Mapper(uses = CarMapper.class)
+//@Mapper(uses = CarMapper.class)
 public interface GarageMapper {
 
     GarageDto map(Garage garage);
