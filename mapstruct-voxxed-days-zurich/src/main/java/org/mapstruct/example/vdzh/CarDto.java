@@ -7,9 +7,12 @@ public class CarDto {
 
     protected String make;
     protected int seatCount;
-    protected String manufacturingYear;
-    protected Long price;
+    protected String manufacturingDate;
+    protected double price;
     protected String category;
+
+    // Custom method mapping
+    protected String model;
 
     public String getMake() {
         return make;
@@ -27,19 +30,19 @@ public class CarDto {
         this.seatCount = seatCount;
     }
 
-    public String getManufacturingYear() {
-        return manufacturingYear;
+    public String getManufacturingDate() {
+        return manufacturingDate;
     }
 
-    public void setManufacturingYear(String manufacturingYear) {
-        this.manufacturingYear = manufacturingYear;
+    public void setManufacturingDate(String manufacturingDate) {
+        this.manufacturingDate = manufacturingDate;
     }
 
-    public Long getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(Long price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -50,4 +53,12 @@ public class CarDto {
     public void setCategory(String category) {
         this.category = category;
     }
+
+//    public String getModel() {
+//        return model;
+//    }
+//
+//    public void setModel(String model) {
+//        this.model = model;
+//    }
 }

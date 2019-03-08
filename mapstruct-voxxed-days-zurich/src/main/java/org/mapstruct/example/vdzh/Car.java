@@ -1,5 +1,6 @@
 package org.mapstruct.example.vdzh;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 /**
@@ -10,8 +11,10 @@ public class Car {
     protected String make;
     protected int numberOfSeats;
     protected LocalDate manufacturingDate;
-    protected int price;
+    protected BigDecimal price;
     protected Category category;
+
+    protected Model model;
 
     public String getMake() {
         return make;
@@ -37,11 +40,11 @@ public class Car {
         this.manufacturingDate = manufacturingDate;
     }
 
-    public int getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
@@ -51,5 +54,13 @@ public class Car {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public Model getModel() {
+        return model;
+    }
+
+    public void setModel(Model model) {
+        this.model = model;
     }
 }
