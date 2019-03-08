@@ -7,16 +7,16 @@ import java.util.List;
  */
 public class GarageDto {
 
-    private String garageId;
+    private String id;
     private String name;
     private List<CarDto> cars;
 
-    public String getGarageId() {
-        return garageId;
+    public String getId() {
+        return id;
     }
 
-    public void setGarageId(String garageId) {
-        this.garageId = garageId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
