@@ -10,7 +10,5 @@ import org.mapstruct.factory.Mappers;
 @Mapper
 public interface CarMapper {
 
-    @Mapping(target = "manufacturingDate", dateFormat = "dd.MM.yyyy")
-    @Mapping(target = "seatCount", source = "numberOfSeats")
     CarDto map(Car car);
 }
