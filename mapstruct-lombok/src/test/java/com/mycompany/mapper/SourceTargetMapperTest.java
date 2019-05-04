@@ -18,12 +18,12 @@
  */
 package com.mycompany.mapper;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 
 import com.mycompany.dto.Source;
 import com.mycompany.entities.Target;
+import com.mycompany.entities.TargetWithBuilder;
+import static org.junit.Assert.assertEquals;
 
 public class SourceTargetMapperTest {
 
@@ -34,5 +34,14 @@ public class SourceTargetMapperTest {
 
         Target t = SourceTargetMapper.MAPPER.toTarget( s );
         assertEquals( 5, (long) t.getTesting() );
+    }
+
+    @Test
+    public void testMappingWithBuilder() {
+        Source s = new Source();
+        s.setTest("5");
+
+        TargetWithBuilder t = SourceTargetMapper.MAPPER.toTargetWithBuilder(s);
+        assertEquals(5, (long) t.getTesting());
     }
 }

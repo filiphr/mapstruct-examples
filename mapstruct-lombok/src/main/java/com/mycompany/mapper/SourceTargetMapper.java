@@ -24,6 +24,7 @@ import org.mapstruct.factory.Mappers;
 
 import com.mycompany.dto.Source;
 import com.mycompany.entities.Target;
+import com.mycompany.entities.TargetWithBuilder;
 
 @Mapper
 public interface SourceTargetMapper {
@@ -32,4 +33,7 @@ public interface SourceTargetMapper {
 
     @Mapping( source = "test", target = "testing" )
     Target toTarget( Source s );
+
+    @Mapping(source = "test", target = "testing")
+    TargetWithBuilder toTargetWithBuilder(Source s);
 }
