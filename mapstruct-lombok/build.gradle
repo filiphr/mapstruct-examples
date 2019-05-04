@@ -19,7 +19,7 @@ dependencies {
     compile "org.mapstruct:mapstruct:${mapstructVersion}", "org.projectlombok:lombok:${lombokVersion}"
     testCompile 'junit:junit:4.12'
     // MapStruct first, Lombok second -> MapStruct can see getters, setters and builder method in TargetWithBuilder
-    annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}", "org.projectlombok:lombok:${lombokVersion}"
+    //annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}", "org.projectlombok:lombok:${lombokVersion}"
     // Lombok first, MapStruct second -> MapStruct can see getters, setters, but it can't see builder method in TargetWithBuilder
-    //annotationProcessor "org.projectlombok:lombok:${lombokVersion}", "org.mapstruct:mapstruct-processor:${mapstructVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}", "org.mapstruct:mapstruct-processor:${mapstructVersion}"
 }
